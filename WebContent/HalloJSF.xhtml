@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+
+<h:body>
+	<h1>Hallo JSF...</h1>
+	<h:form>
+		<h:inputText value="#{helloBean.vorname}" />
+		<h:commandButton action="HalloJSF" value="Los" />
+	</h:form>
+	<h:outputText value="#{helloBean.vorname}" />
+	<!-- 	<h:outputText value="#{helloBean.freunde}" /> -->
+
+	<h:dataTable value="#{helloBean.freunde}" var="freund">
+		<h:column>
+			<h:outputText value="#{freund}" />
+		</h:column>
+
+	</h:dataTable>
+	<div> 
+	<h:panelGrid border="1" columns="2" style="width: 467px; ">
+		<h:outputText value="item1"></h:outputText>
+		<h:outputText value="item2"></h:outputText>
+		<h:outputText value="item3"></h:outputText>
+		<h:outputText value="item4"></h:outputText>
+	</h:panelGrid>
+	</div>
+</h:body>
+
+</html>
